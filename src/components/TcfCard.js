@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { increaseVote, decreaseVote } from '../actions';
 
 const TcfCard = props => {
+
+  console.log(props);
+  
   const { tcf } = props;
 
   return (
