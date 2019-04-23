@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { increaseVote, decreaseVote } from '../actions';
+import { increaseVote, decreaseVote } from '../actions/tcfActions';
 
 const TcfCard = props => {
 

@@ -27,7 +27,7 @@ const initialState = {
   }
 }
 
-const reducer = (state = initialState, action) => {
+const tcfReducer = (state = initialState, action) => {
   switch(action.type) {
     case 'INCREASE_VOTE':
       return {
@@ -56,4 +56,4 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export default reducer;
+export default tcfReducer;

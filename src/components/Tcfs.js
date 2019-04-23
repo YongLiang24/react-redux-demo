@@ -31,7 +31,7 @@ const Tcfs = props => {
 
 const mapStateToProps = state => {
   return {
-    tcfs: state.tcfs
+    tcfs: state.tcfs.tcfs
   }
 }
  
