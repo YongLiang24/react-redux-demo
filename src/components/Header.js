@@ -1,26 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-class Header extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      title: 'TCF'
-    }
-  }
+import { updateTitle } from '../actions/headerActions';
 
-  updateTitle = () => {
-    this.state.title === 'TCF' ? this.setState({title: 'SEC'}) : this.setState({title: 'TCF'})
-  }
+const Header = props => {
 
-  render() {
     return (
       <header className="App-header">
-        <div onClick={this.updateTitle}>
-          {this.state.title} Tally
+        <div onClick={props.updateTitle}>
+          {props.title} Tally
         </div>
       </header>
     )
+  
+}
+
+const mapStateToProps = state => {
+  return {
+    title: state.header.title
   }
 }
 
-export default Header;
+const mapDispatchToProps = dispatch => {
+  return {
+    updateTitle: () => dispatch(updateTitle())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
